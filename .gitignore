@@ -1,0 +1,12 @@
+#ignore files
+*.o 
+*.exe
+*.txt
+*.pro.user
+Calculator
+Makefile*
+#ignore Vlad and direct
+debug/
+release/
+
+
