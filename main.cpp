@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #define e 1e-10
 
+
 int Addition(int a, int b)
 {
     int c=a+b;
@@ -52,7 +53,7 @@ int Root(int a)
 
 int main()
 {
-    int a,b,otv,c;
+    int a,b,otv,c,x;
 
     do{
         printf("1: Addition \n");
@@ -62,53 +63,102 @@ int main()
         printf("5: Power \n");
         printf("6: Root \n");
         printf("7: Exit \n");
-        printf("Choose operation: \n");
-        scanf("%d", &c);
+        do
+        {
+            printf("Choose an operation: \n");
+            x=scanf("%d", &c);
+            while(getchar()!='\n');
+        }while(x!=1);
+        
         switch (c)
         {
             case 1:
+            do
+            {
               printf("Enter first number: \n");
-              scanf("%d",&a);
+              x=scanf("%d",&a);
+              while(getchar()!='\n');
+            }while(x!=1);
+            do
+            {
               printf("Enter second number: \n");
-              scanf("%d",&b);
+              x=scanf("%d",&b);
+              while(getchar()!='\n');
+            }while(x!=1);
               otv=Addition(a,b);
               printf("Answer: %d \n", otv);
               break;
             case 2:
+            do
+            {
               printf("Enter first number: \n");
-              scanf("%d",&a);
+              x=scanf("%d",&a);
+              while(getchar()!='\n');
+            }while(x!=1);
+            do
+            {
               printf("Enter second number: \n");
-              scanf("%d",&b);
+              x=scanf("%d",&b);
+              while(getchar()!='\n');
+            }while(x!=1);
               otv=Subtraction(a,b);
               printf("Answer: %d \n", otv);
               break;
             case 3:
+            do
+            {
               printf("Enter first number: \n");
-              scanf("%d",&a);
+              x=scanf("%d",&a);
+              while(getchar()!='\n');
+            }while(x!=1);
+            do
+            {
               printf("Enter second number: \n");
-              scanf("%d",&b);
+              x=scanf("%d",&b);
+              while(getchar()!='\n');
+            }while(x!=1);
               otv=Multiplication(a,b);
               printf("Answer: %d \n", otv);
               break;
             case 4:
+            do
+            {
               printf("Enter first number: \n");
-              scanf("%d",&a);
+              x=scanf("%d",&a);
+              while(getchar()!='\n');
+            }while(x!=1);
+            do
+            {
               printf("Enter second number: \n");
-              scanf("%d",&b);
+              x=scanf("%d",&b);
+              while(getchar()!='\n');
+            }while(x!=1);
               otv=Devision(a,b);
               printf("Answer: %d \n", otv);
               break;
             case 5:
+            do
+            {
               printf("Enter the number: \n");
-              scanf("%d",&a);
+              x=scanf("%d",&a);
+              while(getchar()!='\n');
+            }while(x!=1);
+            do
+            {
               printf("Enter the power: \n");
-              scanf("%d",&b);
+              x=scanf("%d",&b);
+              while(getchar()!='\n');
+            }while(x!=1);
               otv=Power(a,b);
               printf("Answer: %d \n", otv);
               break;
             case 6:
+            do
+            {
               printf("Enter the number: \n");
-              scanf("%d",&a);
+              x=scanf("%d",&a);
+              while(getchar()!='\n');
+            }while(x!=1);
               otv=Root(a);
               printf("Answer: %d \n", otv);
               break;
