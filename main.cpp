@@ -39,14 +39,15 @@ int Power(int a, int b)
     return c;
 }
 
-int Root(int a)
+int Root(int a, int x)
 {
-     int next=a;
+     int next = a;
+     int n = x;
      int prev;
      do
      {
          prev=next;
-         next = (prev+(a/prev))/2;
+         next = ((n-1)*prev+(a/Power(prev,n-1)))/n;
      }while (prev-next>e);
     return next;
 }
@@ -159,7 +160,13 @@ int main()
               x=scanf("%d",&a);
               while(getchar()!='\n');
             }while(x!=1);
-              otv=Root(a);
+            do
+            {
+              printf("Enter the power: \n");
+              x=scanf("%d",&b);
+              while(getchar()!='\n');
+            }while(x!=1);
+              otv=Root(a,b);
               printf("Answer: %d \n", otv);
               break;
             case 7:
